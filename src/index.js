@@ -23,6 +23,6 @@ function errorHandler(err, req, res, next) {
         res.status(400).json({ "error": 1, "message": err, "data": "" });
     }
 }
-app.server.listen(process.env.PORT || 3000, () => {
+app.server.listen(process.env.PORT || 3036, () => {
     console.log(`Started on port ${app.server.address().port}`);
 });
