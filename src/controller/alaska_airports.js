@@ -1,11 +1,42 @@
 import _ from 'lodash';
 import fs from "file-system";
 import radians from 'degrees-radians';
+import db from '../db.js';
+import jwt from 'jsonwebtoken';
+import passport from 'passport';
+var config = require('../middleware/config');
+var auth = require('../middleware/authantication.js');
 var geodist = require('geodist')
 var file_details = 'alaska_airports_II.json'
-
 module.exports = {
+    register_user: (req, res, next) => {
+        var detail = new db.register_user({
+            username: req.query.username,
+            password: req.query.password
+        })
+        detail.save(function(err, data) {
+            if (err) {
+                console.log(err)
+                res.status(400).json({ error: 1, message: "couldn't register" });
+            } else
+                res.json({ error: 0, message: "user registered", data: data })
+        })
+    },
+    login: (req, res, next) => {
+        db.register_user.findOne({ username: req.query.username, password: req.query.password }, function(err, users_data) {
+            if (err) {
+                res.status(400).json({ error: 1, message: "check email or password" });
+            } else if (users_data) {
+                var payload = { id: users_data._id };
+                var token = jwt.sign(payload, config.secret);
+                res.json({ message: "token generated", token: token });
+            } else {
+                res.json({ error: 1, message: "ivalid user ! get registered!" })
+            }
+        });
+    },
     get_airports: (req, res, next) => {
+        console.log(req.headers.Autherization)
         fs.readFile(file_details, (err, data) => {
             if (err) next(err);
             res.json({
