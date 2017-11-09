@@ -11,12 +11,13 @@
 			"name": "alaska_login",
 			"request": {
 				"url": {
-					"raw": "http://localhost:3036/login?username=ashutosh&password=123",
-					"protocol": "http",
+					"raw": "https://afternoon-harbor-76464.herokuapp.com/login?username=ashutosh&password=123",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"afternoon-harbor-76464",
+						"herokuapp",
+						"com"
 					],
-					"port": "3036",
 					"path": [
 						"login"
 					],
@@ -47,15 +48,13 @@
 			"name": "alaska_register",
 			"request": {
 				"url": {
-					"raw": "http://5.9.144.226:3036/register?username=ashutosh&password=123",
-					"protocol": "http",
+					"raw": "https://afternoon-harbor-76464.herokuapp.com/register?username=ashutosh&password=123",
+					"protocol": "https",
 					"host": [
-						"5",
-						"9",
-						"144",
-						"226"
+						"afternoon-harbor-76464",
+						"herokuapp",
+						"com"
 					],
-					"port": "3036",
 					"path": [
 						"register"
 					],
@@ -81,41 +80,8 @@
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
-							"key": "email",
-							"value": "a@gmail.com",
-							"description": "",
-							"type": "text",
-							"disabled": true
-						},
-						{
-							"key": "password",
-							"value": "test",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "con_password",
-							"value": "123",
-							"description": "",
-							"type": "text",
-							"disabled": true
-						},
-						{
-							"key": "username",
-							"value": "test",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "firstname",
-							"value": "a",
-							"description": "",
-							"type": "text",
-							"disabled": true
-						},
-						{
-							"key": "lastname",
-							"value": "z",
+							"key": "",
+							"value": "",
 							"description": "",
 							"type": "text",
 							"disabled": true
@@ -130,15 +96,13 @@
 			"name": "distance",
 			"request": {
 				"url": {
-					"raw": "http://5.9.144.226:3036/find_distance?airport_location_one='Z59&airport_location_two='ADK",
-					"protocol": "http",
+					"raw": "https://afternoon-harbor-76464.herokuapp.com/find_distance?airport_location_one='Z59&airport_location_two='ADK",
+					"protocol": "https",
 					"host": [
-						"5",
-						"9",
-						"144",
-						"226"
+						"afternoon-harbor-76464",
+						"herokuapp",
+						"com"
 					],
-					"port": "3036",
 					"path": [
 						"find_distance"
 					],
@@ -162,7 +126,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5ZjZmYmZjYjMyYzNjNjQyYzU0MDQ5MCIsImlhdCI6MTUwOTM1ODYwOX0.3dpd514hL2vemE7EVFl7BKfhJbJzhW4ZHdCSztObvU0",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhMDNmN2UwZmYyMTViMDAxMmM2YWQ1NyIsImlhdCI6MTUxMDIwOTU3OH0.H9EZKOBnikWhnvyucCL3ti8Ae8sIPk841NJAZKI9aaI",
 						"description": ""
 					}
 				],
@@ -175,15 +139,13 @@
 			"name": "nearest_three",
 			"request": {
 				"url": {
-					"raw": "http://5.9.144.226:3036/three_nearest_airports?fecility_name=ADAK",
-					"protocol": "http",
+					"raw": "https://afternoon-harbor-76464.herokuapp.com/three_nearest_airports?fecility_name=ADAK",
+					"protocol": "https",
 					"host": [
-						"5",
-						"9",
-						"144",
-						"226"
+						"afternoon-harbor-76464",
+						"herokuapp",
+						"com"
 					],
-					"port": "3036",
 					"path": [
 						"three_nearest_airports"
 					],
@@ -201,7 +163,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5ZjZlZWUyNzY5ZDYxNjU5ZGRhM2I2MCIsImlhdCI6MTUwOTM1NTI2MH0.-SbKrrufb9Aqm0Ek4kmCoC5mOEx4j7QlPIIsdmRBPJ0",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhMDNmN2UwZmYyMTViMDAxMmM2YWQ1NyIsImlhdCI6MTUxMDIwOTU3OH0.H9EZKOBnikWhnvyucCL3ti8Ae8sIPk841NJAZKI9aaI",
 						"description": ""
 					}
 				],
@@ -213,7 +175,7 @@
 		{
 			"name": "all_airport_list",
 			"request": {
-				"url": "http://5.9.144.226:3036/all_airports_list",
+				"url": "https://afternoon-harbor-76464.herokuapp.com/all_airports_list",
 				"method": "GET",
 				"header": [
 					{
