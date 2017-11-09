@@ -1,3 +1,5 @@
+'use strict';
+
 var mongoose = require('mongoose');
 var http = require('http');
 var Schema = mongoose.Schema;
@@ -16,4 +18,5 @@ var user_data = conn.model("user_data", user_details);
 module.exports = {
     register_user: user_data
 
-}
+};
+//# sourceMappingURL=db.js.map

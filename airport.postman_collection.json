@@ -1,0 +1,231 @@
+{
+	"variables": [],
+	"info": {
+		"name": "airport",
+		"_postman_id": "c2c30143-f71f-2a9e-1ff7-cadbd4a85053",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "alaska_login",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3036/login?username=ashutosh&password=123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3036",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "ashutosh",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "alaska_register",
+			"request": {
+				"url": {
+					"raw": "http://5.9.144.226:3036/register?username=ashutosh&password=123",
+					"protocol": "http",
+					"host": [
+						"5",
+						"9",
+						"144",
+						"226"
+					],
+					"port": "3036",
+					"path": [
+						"register"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "ashutosh",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "a@gmail.com",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "con_password",
+							"value": "123",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "a",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "lastname",
+							"value": "z",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "distance",
+			"request": {
+				"url": {
+					"raw": "http://5.9.144.226:3036/find_distance?airport_location_one='Z59&airport_location_two='ADK",
+					"protocol": "http",
+					"host": [
+						"5",
+						"9",
+						"144",
+						"226"
+					],
+					"port": "3036",
+					"path": [
+						"find_distance"
+					],
+					"query": [
+						{
+							"key": "airport_location_one",
+							"value": "'Z59",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "airport_location_two",
+							"value": "'ADK",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5ZjZmYmZjYjMyYzNjNjQyYzU0MDQ5MCIsImlhdCI6MTUwOTM1ODYwOX0.3dpd514hL2vemE7EVFl7BKfhJbJzhW4ZHdCSztObvU0",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "nearest_three",
+			"request": {
+				"url": {
+					"raw": "http://5.9.144.226:3036/three_nearest_airports?fecility_name=ADAK",
+					"protocol": "http",
+					"host": [
+						"5",
+						"9",
+						"144",
+						"226"
+					],
+					"port": "3036",
+					"path": [
+						"three_nearest_airports"
+					],
+					"query": [
+						{
+							"key": "fecility_name",
+							"value": "ADAK",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5ZjZlZWUyNzY5ZDYxNjU5ZGRhM2I2MCIsImlhdCI6MTUwOTM1NTI2MH0.-SbKrrufb9Aqm0Ek4kmCoC5mOEx4j7QlPIIsdmRBPJ0",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "all_airport_list",
+			"request": {
+				"url": "http://5.9.144.226:3036/all_airports_list",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5ZjZmYmZjYjMyYzNjNjQyYzU0MDQ5MCIsImlhdCI6MTUwOTM1ODYwOX0.3dpd514hL2vemE7EVFl7BKfhJbJzhW4ZHdCSztObvU0",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
